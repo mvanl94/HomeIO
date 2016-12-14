@@ -34,7 +34,7 @@ def processRequest(req):
     
     result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({'q': "ON2"})).read()
     
-    data = json.loads(result)
+    
     res = makeWebhookResult()
     
     return res
