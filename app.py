@@ -39,7 +39,7 @@ def processRequest(req):
     
     return res
 
-def makeWebhookResult(data):
+def makeWebhookResult():
     
 
     speech = "I turned on the lights"
