@@ -43,7 +43,7 @@ def processRequest(req):
 
 def makeWebhookResult():
 
-    speech = "I turned the Christmas tree lights on"
+    speech = "I turned on the Christmas tree lights"
 
     print("Response:")
     print(speech)
