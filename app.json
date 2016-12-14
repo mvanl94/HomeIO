@@ -2,5 +2,10 @@
   "name": "API.AI HomeIO",
   "description": "HomeIO Google Home",
   "repository": "https://github.com/mvanl94/HomeIO",
-  "keywords": ["api.ai", "HomeIO"]
+  "keywords": ["api.ai", "HomeIO"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ]
 }
