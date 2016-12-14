@@ -32,7 +32,7 @@ def processRequest(req):
     if req.get("result").get("action") != "SwitchOn":
         return {}
     
-    result = urllib.urlopen(urllib.request("http://86.95.145.13?pin=On")).read()
+    result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({'q': "On"})).read()
     
     data = json.loads(result)
     res = makeWebhookResult()
