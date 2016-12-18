@@ -31,11 +31,12 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "SwitchOn":
         return {}
+        
     action = req.get("result").get("parameters").get("Switch");
     light = req.get("result").get("parameters").get("Light");
     print(action)
     print(light)
-    result = urllib.urlopen("http://86.95.145.13?q="+action+"&a="+light)).read()
+    result = urllib.urlopen("http://86.95.145.13")).read()
     
     
     res = makeWebhookResult()
