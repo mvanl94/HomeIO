@@ -34,7 +34,7 @@ def processRequest(req):
     action = req.get("parameters").get("Switch");
     light = req.get("parameters").get("Light");
     
-    result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({'q': action,'a':light})).read()
+    result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({"q": action,"a":light})).read()
     
     
     res = makeWebhookResult()
@@ -44,7 +44,7 @@ def processRequest(req):
 def makeWebhookResult():
     
 
-    speech = "I turned on the lights"
+    speech = "I switched the lights"
 
     print("Response:")
     print(speech)
