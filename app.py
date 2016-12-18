@@ -33,7 +33,8 @@ def processRequest(req):
         return {}
     action = req.get("parameters").get("Switch");
     light = req.get("parameters").get("Light");
-    
+    print(action)
+    print(light)
     result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({"q": action,"a":light})).read()
     
     
