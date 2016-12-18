@@ -35,7 +35,7 @@ def processRequest(req):
     light = req.get("parameters").get("Light");
     print(action)
     print(light)
-    result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({"q": action,"a":light})).read()
+    result = urllib.urlopen("http://86.95.145.13?q=on&a=christmas"})).read()
     
     
     res = makeWebhookResult()
