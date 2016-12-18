@@ -31,8 +31,10 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "SwitchOn":
         return {}
+    action = req.get("parameters").get("Switch");
+    light = req.get("parameters").get("Light");
     
-    result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({'q': "ON2"})).read()
+    result = urllib.urlopen("http://86.95.145.13?"+urllib.urlencode({'q': action,'a':light})).read()
     
     
     res = makeWebhookResult()
